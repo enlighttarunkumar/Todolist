@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(express.static("public")); // to use the public section we have to inherit it 
 
-mongoose.connect("mongodb://localhost:27017/todolistDB");  // getting connected to our local database 
+mongoose.connect("mongodb+srv://you123:you123@cluster0.c0nvx.mongodb.net/");  // getting connected to our local database 
 
 console.log("all good");
 const itemSchema = new mongoose.Schema({ // this is the schema of the data which we want to save
