@@ -4,6 +4,7 @@ const mongoose  = require('mongoose');
 const { render } = require("ejs");
 const app = express();
 const _ = require("lodash"); // it is used to capatilised the listname 
+const port  = process.env.PORT || 3000 ; 
 
 app.set("view engine","ejs"); // this tell our app to use ejs 
 
@@ -141,8 +142,8 @@ app.post("/delete",function(req,res){
     
 })
 
-app.listen(3000,function(){
-    console.log("Server Started Successfully !");
+app.listen(port,function(){
+    console.log(`server is running on port ${port}`);
 });
 
 function GetDay(){
